@@ -10,13 +10,16 @@ This repository contains the server.
   - Database: [SQLite]
   - Persistency unit: [EclipseLink]
 
-##  The repository
+##  The server
 The server contains its _build.xml_ file, the _ivy.xml_ dependencies file and the source code.
 The src folder contains three packages:
   - **model** contains the entities.
   - **DAO** contains the class with all the methods for accessing the persistence data. 
   - **endpoint** contains the publisher needed in order to run the server
   - **soap** contains the SOAP interface and its implementation, which is only a mapping to the DAO's functions
+  
+## Faulty server
+The repository contains also a faulty version of the server: the persistency unit, which is strongly based on the working one of the second assignment, didn't work. In order to make the server work, entities in the server must be cancelled using SQL queries and not using the persistency API. Since the code seems correct, the faulty version is posted in this repository.
 
 ## How to run the code
 The server is deployed on heroku using the heroku buildpack available at https://github.com/IntroSDE/heroku-buildpack-ant.git
